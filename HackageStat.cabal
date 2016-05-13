@@ -1,13 +1,13 @@
 name:                HackageStat
-version:             0.1.0.0
-synopsis:            Simple project template from stack
+version:             0.1.0.1
+synopsis:            HackageStat - Hackage package description pages downloader
 description:         Please see README.md
 homepage:            https://github.com/githubuser/HackageStat#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
+author:              KolodeznyDiver
 maintainer:          example@example.com
-copyright:           2016 Author name here
+copyright:           2016 KolodeznyDiver
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
@@ -18,10 +18,11 @@ executable HackageStat
   main-is:             Main.hs
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
-                      ,HTTP 
-                      ,parsec
                       ,bytestring
-                      ,pipes
-                      ,pipes-http
-                      ,pipes-bytestring
+                      ,text
                       ,http-client
+                      ,http-conduit
+                      ,xml-conduit
+                      ,xml-lens
+                      ,optparse-applicative
+                      ,easy-file
